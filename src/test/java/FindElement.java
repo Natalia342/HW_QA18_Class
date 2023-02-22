@@ -19,11 +19,9 @@ public class FindElement {
     public void testFind(){
         WebElement id = wd.findElement(By.id("root"));
         System.out.println(id);
-        List<WebElement> list = wd.findElements(By.tagName("meta"));
+        List<WebElement> list = wd.findElements(By.tagName("a"));
         System.out.println(list.size());
-        WebElement element = wd.findElement(By.name("viewport"));
-        System.out.println(element);
-        WebElement text = wd.findElement(By.partialLinkText("HOME"));
+        WebElement text = wd.findElement(By.partialLinkText("HO"));
         System.out.println(text);
         WebElement container = wd.findElement(By.className("container"));
         System.out.println(container);
@@ -31,8 +29,7 @@ public class FindElement {
         System.out.println(div.size());
         WebElement text2 = wd.findElement(By.linkText("LOGIN"));
         System.out.println(text2);
-        List<WebElement> link = wd.findElements(By.tagName("link"));
-        System.out.println(link.size());
+        
     }
     @AfterMethod
     public void postCondition(){
