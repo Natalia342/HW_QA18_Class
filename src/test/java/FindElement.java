@@ -13,7 +13,7 @@ public class FindElement {
     @BeforeMethod
     public void preCondition(){
         wd= new ChromeDriver();
-        wd.navigate().to("https://telranedu.web.app/home");
+        wd.navigate().to("https://telranedu.web.app/login");
     }
     @Test
     public void testFind(){
@@ -27,9 +27,10 @@ public class FindElement {
         System.out.println(container);
         List<WebElement> div = wd.findElements(By.tagName("div"));
         System.out.println(div.size());
-        WebElement text2 = wd.findElement(By.linkText("LOGIN"));
+        WebElement text2 = wd.findElement(By.linkText("ABOUT"));
         System.out.println(text2);
-        
+        List<WebElement> script = wd.findElements(By.tagName("script"));
+        System.out.println(script.size());
     }
     @AfterMethod
     public void postCondition(){
