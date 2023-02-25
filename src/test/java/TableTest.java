@@ -22,7 +22,7 @@ public class TableTest {
         System.out.println(tableColumns.size());
 
         wd.findElement(By.cssSelector("#customers tr:nth-child(3)"));
-        wd.findElement(By.cssSelector("#customers td:nth-child(3)"));
+        wd.findElement(By.cssSelector("table#customers>tbody>tr th:nth-child(3)"));//#customers td:nth-child(3)
     }
     @BeforeMethod
     public void postCondition(){
