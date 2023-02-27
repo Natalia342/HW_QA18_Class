@@ -22,8 +22,8 @@ public class TableTest {
         System.out.println(tableColumns.size());
 
 
-        wd.findElement(By.cssSelector("#customers tr:nth-child(3)"));
-        wd.findElement(By.cssSelector("#customers>tbody>tr>th:last-child,td:nth-child(3)"));//("table#customers>tbody>tr th:nth-child(3)"));//#customers td:nth-child(3)
+        WebElement element = wd.findElement(By.cssSelector("#customers tr:nth-child(3)"));
+        WebElement element1 = wd.findElement(By.cssSelector("#customers>tbody>tr>th:last-child,td:nth-child(3)"));//("table#customers>tbody>tr th:nth-child(3)"));//#customers td:nth-child(3)
     }
     @BeforeMethod
     public void postCondition(){
