@@ -25,6 +25,9 @@ public class FindElement {
         System.out.println(container);
         WebElement text2 = wd.findElement(By.linkText("ABOUT"));
         System.out.println(text2);
+
+
+
         List<WebElement> script = wd.findElements(By.tagName("script"));
         System.out.println(script.size());
         List<WebElement> list = wd.findElements(By.tagName("a"));
@@ -46,6 +49,8 @@ public class FindElement {
         wd.findElement(By.cssSelector("div[id='root'].container"));
         wd.findElement(By.cssSelector("div#root.container"));
 
+        wd.findElement(By.xpath("//*[@class='container']"));
+
         wd.findElement(By.cssSelector("div.navbar-component_nav__1X_4m :nth-child(3)"));
         wd.findElement(By.cssSelector("div a[href='/about']"));
         wd.findElement(By.cssSelector("a[href='/about']"));
@@ -58,6 +63,8 @@ public class FindElement {
         wd.findElements(By.cssSelector("a"));
         wd.findElements(By.cssSelector("div.navbar-component_nav__1X_4m [style]"));
         wd.findElements(By.cssSelector("div.navbar-component_nav__1X_4m [href]"));
+
+        wd.findElements(By.xpath("//a"));
 
         wd.findElements(By.cssSelector("div"));
 
