@@ -26,8 +26,6 @@ public class FindElement {
         WebElement text2 = wd.findElement(By.linkText("ABOUT"));
         System.out.println(text2);
 
-
-
         List<WebElement> script = wd.findElements(By.tagName("script"));
         System.out.println(script.size());
         List<WebElement> list = wd.findElements(By.tagName("a"));
@@ -49,8 +47,6 @@ public class FindElement {
         wd.findElement(By.cssSelector("div[id='root'].container"));
         wd.findElement(By.cssSelector("div#root.container"));
 
-        wd.findElement(By.xpath("//*[@class='container']"));
-
         wd.findElement(By.cssSelector("div.navbar-component_nav__1X_4m :nth-child(3)"));
         wd.findElement(By.cssSelector("div a[href='/about']"));
         wd.findElement(By.cssSelector("a[href='/about']"));
@@ -67,7 +63,17 @@ public class FindElement {
         wd.findElements(By.xpath("//a"));
 
         wd.findElements(By.cssSelector("div"));
-
+        //xPath
+        WebElement ID = wd.findElement(By.xpath("//div[@id='root']"));
+        WebElement ID1 = wd.findElement(By.xpath("//*[@id='root']"));
+        WebElement texT = wd.findElement(By.xpath("//div/div/a[@href='/home']"));
+        WebElement clasS = wd.findElement(By.xpath("//div[@id='root'][@class='container']"));
+        WebElement clasS1 = wd.findElement(By.xpath("//div[@class='container']"));
+        WebElement Text = wd.findElement(By.xpath("//div/div/a[@href='/about']"));
+        List<WebElement> tag = wd.findElements(By.xpath("//*//script"));
+        List<WebElement> tag1 = wd.findElements(By.xpath("//script"));
+        List<WebElement> tagA = wd.findElements(By.xpath("//div/a"));
+        List<WebElement> diV = wd.findElements(By.xpath("//div"));
 
     }
     @AfterMethod

@@ -23,8 +23,18 @@ public class TableTest {
 
 
         WebElement element = wd.findElement(By.cssSelector("#customers tr:nth-child(3)"));
-        WebElement element1 = wd.findElement(By.cssSelector("#customers>tbody>tr>th:last-child,td:nth-child(3)"));//("table#customers>tbody>tr th:nth-child(3)"));//#customers td:nth-child(3)
+        WebElement element1 = wd.findElement(By.cssSelector("table#customers>tbody>tr th:nth-child(3)"));//("#customers>tbody>tr>th:last-child,td:nth-child(3)"));//#customers td:nth-child(3)
+
+        //xPath
+        List<WebElement> rows = wd.findElements(By.xpath("//table[@id='customers']/tbody/tr"));
+        System.out.println(rows.size());
+        List<WebElement> columns = wd.findElements(By.xpath("//table[@id='customers']/tbody/tr/th"));
+        System.out.println(columns.size());
+        WebElement row3 = wd.findElement(By.xpath("//*[@id='customers']//tr[3]"));
+        WebElement column3 = wd.findElement(By.xpath("//table[@id='customers']/tbody/tr//th[3]"));
+
     }
+
     @BeforeMethod
     public void postCondition(){
     //    wd.quit();
