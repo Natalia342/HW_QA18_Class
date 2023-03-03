@@ -75,6 +75,8 @@ public class FindElement {
         List<WebElement> tagA = wd.findElements(By.xpath("//div/a"));
         List<WebElement> diV = wd.findElements(By.xpath("//div"));
 
+        wd.findElement(By.xpath("//a[text()='ABOUT']"));
+
     }
     @AfterMethod
     public void postCondition(){
